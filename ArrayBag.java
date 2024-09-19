@@ -261,15 +261,13 @@ public final class ArrayBag<T> implements BagInterface<T> {
         int j = i + 1;
         while (j < numberOfEntries) {
             if (bag[j].equals(currentItem)) {
-                // Remove duplicate using removeEntry method
                 removeEntry(j);
             } else {
                 j++;
            }
         }
       }
-    }
-    
+
         return;
     }  // end removeDuplicates
 
