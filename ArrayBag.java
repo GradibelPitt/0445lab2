@@ -253,21 +253,23 @@ public final class ArrayBag<T> implements BagInterface<T> {
      */
     public void removeDuplicates() {
         checkInitialization();
-        for (int i = 0; i < numberOfEntries; i++) {
-            T currentItem = bag[i];
 
-            int j = i + 1;
-            while (j < numberOfEntries) {
-                if (bag[j].equals(currentItem))
-                removeEntry(j);
-               } else{
-                 j++;
-               }
-               }
-            }
-        }
         // COMPLETE THIS METHOD 
+        for (int i = 0; i < numberOfEntries; i++) {
+        T currentItem = bag[i];
 
+        int j = i + 1;
+        while (j < numberOfEntries) {
+            if (bag[j].equals(currentItem)) {
+                // Remove duplicate using removeEntry method
+                removeEntry(j);
+            } else {
+                j++;
+           }
+        }
+      }
+    }
+    
         return;
     }  // end removeDuplicates
 
